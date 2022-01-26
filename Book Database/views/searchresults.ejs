@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: url("background3.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            -webkit-text-stroke: 1px blue;
+
+        }
+
+        .container1 {
+            position: fixed;
+            left: 50px;
+            top: 150px;
+            color: white;
+        }
+
+        .container2 {
+            position: fixed;
+            left: 300px;
+            top: 150px;
+            color: white;
+        }
+
+        .container3 {
+            position: fixed;
+            left: 550px;
+            top: 150px;
+            color: white;
+        }
+
+        .container4 {
+            position: fixed;
+            left: 800px;
+            top: 150px;
+            color: white;
+        }
+
+        .container5 {
+            position: fixed;
+            left: 1050px;
+            top: 150px;
+            color: white;
+        }
+
+        .container6 {
+            position: fixed;
+            left: 1300px;
+            top: 150px;
+            color: white;
+        }
+
+        .containermsg {
+            position: fixed;
+            height: 50px;
+            width: 200px;
+            left: 00px;
+            top: 56px;
+            background-color: lightgreen;
+            color: rgb(24, 80, 24);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <%if( message.length>0 ){ %>
+        <div class="alert alert-success">
+            <%= message %>
+        </div>
+        <%}%>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+                <a class="navbar-brand" style="color: rgb(191, 255, 161)">Search Results</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+                    <form method="POST" action='/search' class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" name="Search" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+
+                </div>
+                <%if(filteredBooks.includes("To Kill a Mockingbird") ){ %>
+                    <div class="container1">
+                        <img id="image" src="/mockingbird.jpg" width="193" height="300">
+                        <br>
+                        <label id="label2" class="ml-4 my-2">To Kill a Mockingbird</label>
+                        <br>
+                        <button onclick="location.href = '/mockingbird';" id="mockingbird"
+                            class="btn btn-secondary ml-3"> View
+                        </button>
+                    </div>
+                    <%}%>
+                        <%if(filteredBooks.includes("Dune") ){ %>
+                            <<div class="container2">
+                                <img id="image" src="/dune.jpg" width="193" height="300">
+                                <br>
+                                <label id="label1" class="ml-4 my-2">Dune</label>
+                                <br>
+                                <button onclick="location.href = '/dune';" id="dune" class="btn btn-secondary ml-3">
+                                    View
+                                </button>
+                                </div>
+                                <%}%>
+                                    <%if(filteredBooks.includes("Lord of the Flies") ){ %>
+                                        <div class="container3">
+                                            <img id="image" src="/flies.jpg" width="193" height="300">
+                                            <br>
+                                            <label id="label1" class="ml-4 my-2">Lord of the Flies</label>
+                                            <br>
+                                            <button onclick="location.href = '/flies';" id="flies"
+                                                class="btn btn-secondary ml-3"> View </button>
+                                        </div>
+                                        <%}%>
+                                            <%if(filteredBooks.includes("The Grapes of Wrath") ){ %>
+                                                <div class="container4">
+                                                    <img id="image" src="/grapes.jpg" width="193" height="300">
+                                                    <br>
+                                                    <label id="label2" class="ml-4 my-2">The Grapes of Wrath</label>
+                                                    <br>
+                                                    <button onclick="location.href = '/grapes';" id="grapes"
+                                                        class="btn btn-secondary ml-3"> View </button>
+                                                </div>
+                                                <%}%>
+                                                    <%if(filteredBooks.includes("Leaves of Grass") ){ %>
+                                                        <div class="container5">
+                                                            <img id="image" src="/leaves.jpg" width="193" height="300">
+                                                            <br>
+                                                            <label id="label1" class="ml-4 my-2">Leaves of Grass</label>
+                                                            <br>
+                                                            <button onclick="location.href = '/leaves';" id="leaves"
+                                                                class="btn btn-secondary ml-3"> View </button>
+                                                        </div>
+                                                        <%}%>
+                                                            <%if(filteredBooks.includes("The Sun and Her Flowers") ){ %>
+                                                                <div class="container6">
+                                                                    <img id="image" src="/sun.jpg" width="193"
+                                                                        height="300">
+                                                                    <br>
+                                                                    <label id="label2" class="ml-4 my-2">The Sun and Her
+                                                                        Flowers</label>
+                                                                    <br>
+                                                                    <button onclick="location.href = '/sun';" id="sun"
+                                                                        class="btn btn-secondary ml-3"> View </button>
+                                                                </div>
+                                                                <%}%>
+            </nav>
+</body>
+
+</html>
