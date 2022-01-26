@@ -1,0 +1,34 @@
+{
+  "name": "theproject",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "alert-js": "^1.0.1",
+    "connect-flash": "^0.1.1",
+    "connect-memcached": "^1.0.0",
+    "connect-redis": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "debug": "~2.6.9",
+    "docker-cli-js": "^2.8.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "fs": "0.0.1-security",
+    "http-errors": "~1.6.3",
+    "init": "^0.1.2",
+    "morgan": "~1.9.1",
+    "redis": "^3.0.2",
+    "serve-favicon": "^2.5.0",
+    "session-file-store": "^1.5.0",
+    "sessionstorage": "^0.1.0"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
