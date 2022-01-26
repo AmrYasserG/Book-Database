@@ -4,6 +4,7 @@ The objective of this project is to get an experience in developing a network ap
 # Technologies #
 * Node.js
 * Express
+* Embedded JavaScript (EJS)
 * File System 
   * It's a core module in NodeJS. It is an API that allows you to interact with the file system in your computer. Used to create a local database for the website as a simple storage files for your data.
  
